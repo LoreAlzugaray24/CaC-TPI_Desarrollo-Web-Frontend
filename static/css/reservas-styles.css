@@ -1,0 +1,206 @@
+.section-form-r {
+  margin: 0 auto;
+  padding: 18px 36px 36px;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+}
+h1 {
+  font-size: clamp(2rem, 1vw + 1rem, 2rem);
+  font-weight: 800;
+  color: var(--secondary-color);
+  text-align: center;
+  padding-top: 8px;
+}
+
+/* Estilos para las tarjetas */
+.text-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  padding: 36px 18px 28px;
+}
+.text-cards .card {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.text-cards .card:nth-child(odd) {
+  transform: translateY(-20px);
+}
+.text-cards .card:nth-child(even) {
+  transform: translateY(20px);
+}
+.card {
+  color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;  
+  width: 30%;
+}
+.card h3 {
+  font-size: clamp(1rem, 1vw + 0.6rem, 1rem);
+  font-weight: 700;
+  text-align: center;
+}
+.card p {
+  font-size: clamp(0.75rem, 1vw + 0.6rem, 0.75rem);
+  font-weight: 600;
+  color: #343434;
+  text-align: justify;
+}
+
+/* Estilos para el formulario de reserva */
+.reservation-form {
+  box-sizing: content-box;
+  width: 95%; /* Reducir el formulario al 85% del ancho */
+  margin: 0 auto; /* Centrar el formulario */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-row1 {
+  padding-top: 25px;
+  display: flex;
+  gap: 50px;
+}
+.form-group.people {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#n-people {
+  padding: 5px 5px;
+  margin: 4px;
+  text-align: center;
+}
+label {
+  display: block;
+}
+.form-row2 {
+  display: flex;
+  gap: 50px;
+}
+.form-row-set {
+  display: grid;
+  gap: 10px;
+}
+
+.form-row1,
+.form-row2,
+.form-row-set {
+  padding: 0 36px 12px;
+  accent-color: #af7c4c;
+}
+
+/* Estilos para los campos de entrada */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.input,
+select,
+label {
+  font-size: clamp(0.75rem, 1vw + 0.6rem, 0.75rem);
+  font-weight: 600;
+  color: #343434;
+}
+
+select {
+  margin: 1px;
+  padding: 5px;
+}
+
+.check {
+  font-size: clamp(0.7rem, 1vw + 0.7rem, 0.7rem);
+  display: flex;
+  align-items: baseline;
+}
+.check input {
+  width: 5%;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+#error-date,
+#error-appt,
+#error-n-people,
+#error-name,
+#error-email,
+#error-phone {
+  margin-top: 5px; /* Espacio entre el campo y el mensaje de error */
+}
+
+/* Estilos para el botón de envío */
+button {
+  width: 50%;
+  margin: 10px auto; /* Centra horizontalmente el botón */
+  padding: 10px 20px;
+  background-color: #af7c4c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a07845;
+}
+
+/* Ajustes para los input de tipo number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  opacity: 1;
+}
+
+/* Ajustes para quitar flechas de los input de tipo number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  opacity: 1;
+}
+
+/* Media query para pantallas de hasta 840px */
+@media screen and (max-width: 840px) {
+  /* Estilos para las tarjetas */
+  .text-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card p {
+    font-size: clamp(0.7rem, 1vw + 0.7rem, 0.7rem);
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+/* Media query para pantallas de hasta 768px */
+@media screen and (max-width: 768px) {
+  .text-cards .card {
+    width: 100%;
+  }
+}
+
+/* Media query para pantallas de hasta 438px */
+@media screen and (max-width: 438px) {
+  .reservation-form {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+  .text-cards {
+    text-align: left;
+    grid-gap: 15px;
+    padding-top: 42px;
+    padding-bottom: 64px;
+  }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Central: Carta</title>
+    <link rel="icon" href="/static/img/cafe-central.png" type="image/png" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/contact-styles.css">
+    <!-- Fontawesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/static/img/logo.png" alt="Logo" /></a>
+            </div>
+            <div class="nav-links">
+                <ul class="horizontal-navbar">
+                    <li class="hideOnMobile"><a href="/">Home</a></li>
+                    <li class="hideOnMobile">
+                        <a href="/templates/menu.html">Menú</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a href="/templates/reservas.html">Reservas</a>
+                    </li>
+                    <li class="menu-btn" onclick="showSidebar()">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960"
+                                width="28px" fill="#000000">
+                                <path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                            </svg></a>
+                    </li>
+                </ul>
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960"
+                                width="28px" fill="#000000">
+                                <path
+                                    d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                            </svg></a>
+                    </li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/templates/menu.html">Menú</a></li>
+                    <li><a href="/templates/reservas.html">Reservas</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="contact-bg">
+                <h1>Contactenos</h1>
+                <div class="line">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p class="contact-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda iste facilis
+                    quos impedit fuga nobis modi debitis laboriosam velit reiciendis quisquam alias corporis, maxime
+                    enim, optio ab dolorum sequi qui.</p>
+            </div>
+            <div class="contact-body">
+                <div class="contact-info">
+                    <div>
+                        <span><i class="fas fa-mobile-alt"></i></span>
+                        <span>Teléfono celular No.</span>
+                        <span class="text">54-2-546-239282</span>
+                    </div>
+                    <div>
+                        <span><i class="fas fa-envelope-open"></i></span>
+                        <span>E-mail</span>
+                        <span class="text">cafe.central@gmail.com</span>
+                    </div>
+                    <div>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span>Dirección</span>
+                        <span class="text">Alvear 25<br>Villa Carlos Paz, Córdoba</span>
+                    </div>
+                    <div>
+                        <span><i class="fas fa-clock"></i></span>
+                        <span>Días y horarios</span>
+                        <span class="text">Lunes a Sabados <br> 9:00 AM a 23:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="form" action="">
+                        <div>
+                            <label for="first-name">
+                                <input type="text" id="first-name" class="form-control" name="first-name" minlength="2"
+                                    maxlength="25" placeholder="Nombre" required>
+                                    <div class="error-msg" id="first-name-error"><span></span></div>
+                            </label>
+                            <label for="last-name">
+                                <input type="text" id="last-name" class="form-control" name="last-name" minlength="2"
+                                    maxlength="30" placeholder="Apellido" required>
+                                <div class="error-msg" id="last-name-error"><span></span></div>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="form2-email">
+                                <input type="email" id="form2-email" class="form-control" name="form2-email" min="2"
+                                    max="120" placeholder="Correo electrónico" required>
+                                <div class="error-msg" id="form2-email-error"><span></span></div>
+                            </label>
+                            <label for="form2-phone">
+                                <input type="tel" id="form2-phone" class="form-control" name="form2-phone"
+                                    placeholder="Número de teléfono" required>
+                                <div class="error-msg" id="form2-phone-error"><span></span></div>
+                            </label>
+                        </div>
+                        <label for="form2-textarea">
+                            <textarea id="form2-textarea" class="form-control" name="form2-textarea"
+                                placeholder="Realizar consulta..." rows="5"></textarea>
+                        </label>
+
+                        <button type="submit" class="send-btn" name="button" onclick="valida_envia()">Enviar</button>
+                    </form>
+                </div>
+            </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7525633691603!2d-64.50075882603356!3d-31.420942717370995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d66440fabf3f7%3A0x646df0511d365d7a!2sAlvear%2050%2C%20X5152%20Villa%20Carlos%20Paz%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1717379092320!5m2!1ses-419!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <div id="footer-top">
+            <div class="footer-links">
+                <div class="footer-segment">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li>
+                            <a href="http://127.0.0.1:5500/#nosotros">Acerca de nosotros</a>
+                        </li>
+                        <li><a href="/templates/contact.html">Contacto y localización</a></li>
+                    </ul>
+                </div>
+                <div class="footer-segment">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="http://127.0.0.1:5500/#servicio1">Café de Especialidad</a></li>
+                        <li><a href="http://127.0.0.1:5500/#servicio2">Comidas Caseras</a></li>
+                        <li><a href="http://127.0.0.1:5500/#servicio3">Reservaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-segment">
+                    <h3>Privacidad</h3>
+                    <ul>
+                        <li><a href="/templates/error404.html">Términos y condiciones</a></li>
+                        <li><a href="/templates/error404.html">Política de privacidad</a></li>
+                        <li><a href="/templates/error404.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-media">
+                <div class="footer-segment">
+                    <h3>Redes Sociales</h3>
+                    <ul>
+                        <li><a href="/templates/error404.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 32 32" width="48px" height="48px">
+                                    <path
+                                        d="M 4.0175781 4 L 13.091797 17.609375 L 4.3359375 28 L 6.9511719 28 L 14.246094 19.34375 L 20.017578 28 L 20.552734 28 L 28.015625 28 L 18.712891 14.042969 L 27.175781 4 L 24.560547 4 L 17.558594 12.310547 L 12.017578 4 L 4.0175781 4 z M 7.7558594 6 L 10.947266 6 L 24.279297 26 L 21.087891 26 L 7.7558594 6 z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="/templates/error404.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 26 26" width="48px" height="48px">
+                                    <path
+                                        d="M 7.546875 0 C 3.390625 0 0 3.390625 0 7.546875 L 0 18.453125 C 0 22.609375 3.390625 26 7.546875 26 L 18.453125 26 C 22.609375 26 26 22.609375 26 18.453125 L 26 7.546875 C 26 3.390625 22.609375 0 18.453125 0 Z M 7.546875 2 L 18.453125 2 C 21.527344 2 24 4.46875 24 7.546875 L 24 18.453125 C 24 21.527344 21.53125 24 18.453125 24 L 7.546875 24 C 4.472656 24 2 21.53125 2 18.453125 L 2 7.546875 C 2 4.472656 4.46875 2 7.546875 2 Z M 20.5 4 C 19.671875 4 19 4.671875 19 5.5 C 19 6.328125 19.671875 7 20.5 7 C 21.328125 7 22 6.328125 22 5.5 C 22 4.671875 21.328125 4 20.5 4 Z M 13 6 C 9.144531 6 6 9.144531 6 13 C 6 16.855469 9.144531 20 13 20 C 16.855469 20 20 16.855469 20 13 C 20 9.144531 16.855469 6 13 6 Z M 13 8 C 15.773438 8 18 10.226563 18 13 C 18 15.773438 15.773438 18 13 18 C 10.226563 18 8 15.773438 8 13 C 8 10.226563 10.226563 8 13 8 Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="/templates/error404.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 32 32" width="48px" height="48px">
+                                    <path
+                                        d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="/templates/error404.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 50 50" width="50px" height="50px">
+                                    <path
+                                        d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li><a href="/templates/error404.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 32 32" width="48px" height="48px">
+                                    <path
+                                        d="M 8.6425781 4 C 7.1835781 4 6 5.181625 6 6.640625 C 6 8.099625 7.182625 9.3085938 8.640625 9.3085938 C 10.098625 9.3085938 11.283203 8.099625 11.283203 6.640625 C 11.283203 5.182625 10.101578 4 8.6425781 4 z M 21.535156 11 C 19.316156 11 18.0465 12.160453 17.4375 13.314453 L 17.373047 13.314453 L 17.373047 11.310547 L 13 11.310547 L 13 26 L 17.556641 26 L 17.556641 18.728516 C 17.556641 16.812516 17.701266 14.960938 20.072266 14.960938 C 22.409266 14.960937 22.443359 17.145609 22.443359 18.849609 L 22.443359 26 L 26.994141 26 L 27 26 L 27 17.931641 C 27 13.983641 26.151156 11 21.535156 11 z M 6.3632812 11.310547 L 6.3632812 26 L 10.923828 26 L 10.923828 11.310547 L 6.3632812 11.310547 z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer-bottom">
+            <div class="copyright">
+                <p>
+                    Copyright &copy; 2024, Café Central. Todos los derechos reservados.
+                </p>
+            </div>
+            <div class="info-web">
+                <ul>
+                    <li><a href="/templates/error404.html">Blog</a></li>
+                    <li><a href="/templates/error404.html">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/script-form.js"></script>
+</body>
+
+</html>
